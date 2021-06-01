@@ -1,0 +1,111 @@
+h2 {
+  color: white;
+}
+p {
+  margin: 18px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  color: white;
+}
+.Display {
+  width: 100%;
+  min-height: calc(100vh - 145px);
+  align-items: center;
+  border: 3px rgb(255, 255, 24) solid;
+  background-color: rgba(0, 0, 0, 0.822);
+  margin: auto;
+  box-sizing: border-box;
+  font-family: "DotGothic16", sans-serif;
+}
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.582);
+  color: black;
+}
+.BioModal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.582);
+  color: black;
+}
+.BioForm {
+  text-align: center;
+}
+.BioForm input {
+  width: 80%;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  font-family: "DotGothic16", sans-serif;
+}
+.BioForm button {
+  width: 20%;
+  font-family: "DotGothic16", sans-serif;
+}
+.modalMessage {
+  padding: 10px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.726);
+  color: white;
+}
+.modalMessageTheme {
+  padding: 10px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(177, 174, 174, 0.829);
+  /* background-color: rgba(202, 200, 200, 0.829); */
+  color: white;
+}
+.modalMessage > p {
+  margin: 0;
+}
+.Navbar {
+  width: 100%;
+  display: flex;
+  padding: 0;
+  margin: 0em;
+  margin-top: 0;
+}
+.Navbar > li {
+  list-style: none;
+  padding: 0;
+  margin: 5px;
+  margin-bottom: 8px;
+  flex-grow: 1;
+  font-size: 1em;
+  color: white;
+  box-sizing: border-box;
+}
+button {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  flex-grow: 1;
+  font-size: 1em;
+  color: black;
+  background-color: white;
+  border: solid black;
+  box-sizing: border-box;
+}
+.borderPic {
+  border: rgb(120, 255, 153) 4px solid;
+}
+.noBorderPic {
+  border: transparent 4px solid;
+}
+.errorMessage {
+  color: rgb(255, 251, 0);
+  font-size: 1em;
+  margin: 4px;
+}
+
+.icon {
+  transform: scale(1.8);
+}

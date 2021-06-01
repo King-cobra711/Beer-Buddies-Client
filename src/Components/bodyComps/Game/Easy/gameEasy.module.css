@@ -1,0 +1,64 @@
+button {
+  width: 80%;
+  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: "DotGothic16", sans-serif;
+}
+.Display {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 3px rgb(255, 255, 24) solid;
+  border-top: 0;
+  border-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.726);
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Display button {
+  width: 80%;
+  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  font-family: "DotGothic16", sans-serif;
+}
+.Display a {
+  width: 80%;
+  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  font-family: "DotGothic16", sans-serif;
+}
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.582);
+  color: black;
+  text-align: center;
+}
+.modalMessage {
+  padding: 10px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.726);
+  color: white;
+}
+.modalMessage > p {
+  margin: 0;
+}
+@media screen and (max-width: 370px) {
+  .Display button {
+    font-size: 0.7em;
+  }
+  .Display a {
+    font-size: 0.7em;
+  }
+}
