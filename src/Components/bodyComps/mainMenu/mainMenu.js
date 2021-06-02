@@ -15,6 +15,17 @@ const MainMenu = () => {
   let user = User()[0];
 
   useEffect(() => {
+    fetch(process.env.REACT_APP_URL + "/test", {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application.json",
+      },
+    }).then((data) => {
+      console.log(data);
+    });
+  }, []);
+  useEffect(() => {
     setLoaded(false);
     if (data === true) {
       if (typeof log !== "undefined") {
