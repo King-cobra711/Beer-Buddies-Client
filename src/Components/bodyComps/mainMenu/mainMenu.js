@@ -22,7 +22,7 @@ const MainMenu = () => {
         "Content-Type": "application.json",
       },
     }).then((data) => {
-      console.log(data);
+      console.log(data + "This is test data");
     });
   }, []);
   useEffect(() => {
