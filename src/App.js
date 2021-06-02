@@ -19,6 +19,7 @@ import UserCard from "./Components/bodyComps/userCard/userCard";
 import AdminMenu from "./Admin/adminMenu";
 import AdminAddUserType from "./Admin/adminAddUserType";
 import AdminEditUser from "./Admin/adminEditUser";
+import Help from "./Help/help";
 
 function App() {
   const [loginStatus, setLoginStatus] = useState(false);
@@ -28,7 +29,7 @@ function App() {
   useEffect(() => {
     async function fetchAPI() {
       setLoaded(false);
-      const request = await fetch(process.env.REACT_APP_URL + "/login", {
+      const request = await fetch("http://localhost:3001/login", {
         method: "GET",
         headers: {
           "Content-type": "application/json",
@@ -145,6 +146,7 @@ function App() {
         )}
         <Route path="/difficulty" render={() => <ChooseDifficulty />}></Route>
         <Route path="/easy" render={() => <Easy />}></Route>
+        <Route path="/help" render={() => <Help />}></Route>
         {loaded ? (
           <Route
             path="/register"
