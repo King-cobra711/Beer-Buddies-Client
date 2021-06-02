@@ -21,8 +21,10 @@ const MainMenu = () => {
       headers: {
         "Content-Type": "application.json",
       },
-    }).then((data) => {
-      console.log(data + "This is test data");
+    }).then((res) => {
+      res.json().then((data) => {
+        console.log(data + "This is test data");
+      });
     });
   }, []);
   useEffect(() => {
