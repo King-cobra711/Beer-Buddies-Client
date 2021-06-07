@@ -4,7 +4,6 @@ import classes from "./welcomMessage.module.css";
 import * as Mui from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import User from "../../hoc/user";
-import HelpIcon from "@material-ui/icons/Help";
 
 const WelcomeMessage = () => {
   let history = useHistory();
