@@ -45,8 +45,8 @@ const Register = () => {
                 body: JSON.stringify(fields),
               }).then((res) => {
                 if (res.status === 200) {
+                  console.log("hello from matt");
                   res.json().then((data) => {
-                    console.log(data + "penis");
                     setUserExists("");
                     setEmailExists("");
                     history.push("/");
