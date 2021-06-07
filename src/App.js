@@ -29,7 +29,7 @@ function App() {
   useEffect(() => {
     async function fetchAPI() {
       setLoaded(false);
-      const request = await fetch("http://localhost:3001/login", {
+      const request = await fetch(process.env.REACT_APP_URL + "/login", {
         method: "GET",
         headers: {
           "Content-type": "application/json",
