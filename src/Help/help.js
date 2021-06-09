@@ -16,15 +16,15 @@ const Help = () => {
       <p>
         You do not have to be logged in to play the easy (tipsy) game mode.
         However, in order to:
-        <ul>
-          <li>play higher difficulty modes</li>
-          <li>add friends</li>
-          <li>have a profile page</li>
-        </ul>
-        You must register an account/log in. Click play to go to choose
-        difficulty page. Click login to go to login/register page. click
-        leaderboards to veiw current leaderboards of registered users.
       </p>
+      <ul>
+        <li>play higher difficulty modes</li>
+        <li>add friends</li>
+        <li>have a profile page</li>
+      </ul>
+      You must register an account/log in. Click play to go to choose difficulty
+      page. Click login to go to login/register page. click leaderboards to veiw
+      current leaderboards of registered users.
       <h2>Choose difficulty</h2>
       <ul>
         <li>Tipsy = Easy. 2 x 3 squares</li>
