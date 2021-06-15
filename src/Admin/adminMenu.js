@@ -61,6 +61,25 @@ const AdminMenu = () => {
     });
   }, [refresh]);
 
+  useEffect(() => {
+    setLoaded(false);
+    setRefresh(false);
+    fetch(process.env.REACT_APP_URL + "/Whitelist", {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application.json",
+      },
+    }).then((res) => {
+      if (res.status === 200) {
+        setLoaded(true);
+      } else {
+        setLoaded(true);
+        history.push("/login");
+      }
+    });
+  }, []);
+
   return (
     <div>
       <ul className={classes.Navbar}>
