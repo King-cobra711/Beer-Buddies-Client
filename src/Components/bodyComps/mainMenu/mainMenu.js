@@ -123,10 +123,7 @@ const MainMenu = () => {
           )}
         </div>
       ) : (
-        <Mui.CircularProgress
-          color="white"
-          style={{ position: "relative", left: "150%" }}
-        />
+        <Mui.CircularProgress style={{ position: "relative", left: "150%" }} />
       )}
     </Aux>
   );
