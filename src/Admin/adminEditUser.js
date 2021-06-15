@@ -14,6 +14,8 @@ const AdminEditUser = () => {
 
   const [userInfo, setUserInfo] = useState({});
   const [loaded, setLoaded] = useState(false);
+  const [localTheme, setLocalTheme] = useState("");
+  const [localBio, setLocalBio] = useState("");
 
   let history = useHistory();
 
@@ -69,6 +71,10 @@ const AdminEditUser = () => {
           }}
           validationSchema={userSchema}
           onSubmit={(fields) => {
+            setLocalBio(fields.biography);
+            setLocalTheme(fields.theme);
+            localStorage.setItem("theme", localTheme);
+            localStorage.setItem("bio", localBio);
             fetch(process.env.REACT_APP_URL + "/AdminUpdateUser", {
               method: "POST",
               headers: {
