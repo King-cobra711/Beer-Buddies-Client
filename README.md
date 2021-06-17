@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Beer Buddies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+The project is the creation of the ‘Beer Buddies’ game. The game is essentially a card-flip memory game. The aim of the game is to complete the game in the shortest time. Players will be able to compete against each other for a place on the leader board. Leader board rankings are based on the shortest time a player has taken to play the game.
 
-In the project directory, you can run:
+## Technologies
 
-### `npm start`
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [MAMP](https://www.mamp.info/en/downloads/) or [MySQL](https://www.mysql.com/)
+- [NodeJS (includes npm)](https://nodejs.org/en/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## .ENV file setup for assessment purposes
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- DB_HOST=localhost
+- DB_USER=beerAdmin (Your User for MAMP/MySQL)
+- DB_PASS=VzjCTh0terHVarXP (The password for the above user)
+- DATABASE=Beer_Buddies (Name of database)
+- DB_DOCK=8889
+- SESSION_SECRET=LDpFx23F8!!dCnwi$w
+- SESSION_TIMEOUT=3600000
 
-### `npm test`
+These will be subject to change depending on what your MAMP/MySQL setup is. Make sure you double check these values.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Launch
 
-### `npm run build`
+- Open the terminal and use the `cd` to navigate to your desktop or your preffered location to store this project.
+- Once there use the command `mkdir Beer_Buddies` to create a new folder entitled Beer_Buddies.
+- Now use the command `git clone https://github.com/King-cobra711/Beer_Buddies_Fullstack.git` to copy the project files from the github repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Database setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can use phpMyAdmin's UI to set up a new database and import the project sql file in the sql folder from the repository. **Make sure you have setup your user's privilages to the new database.**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Alternitavley you can use the terminal:
 
-### `npm run eject`
+- copy and paste `/Applications/MAMP/Library/bin/mysql -uroot -p` into the terminal. If you want to use a different user other than the root user then change "-u**root**" to the preffered user.
+- If done correctly then you will be prompted to input your password for your chosen user.
+- If you want to creat a new user input `mysql> create user 'USER_NAME'@'localhost' identified by 'PASSWORD';`
+- Make a new database to store the files `mysql> create database DATABASE_NAME;`
+- Give new/existing User privilages to new database `mysql> grant all privileges on DATABASE_NAME.* TO 'USER_NAME'@'localhost';`
+- Import sql file for project into new database `/applications/MAMP/library/bin/mysql -u User_Name -p Database_Name < /Users/Matt/Desktop/test\ lauch/beerbuds.sql`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Alter code for .ENV**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+There was no .ENV file uploaded to this repository however for assessment purposes information for this .ENV file can be found above. To ensure the project is configured to your data base:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Go into the project files Beer Buddies > server > sql > db_functions.js
+- Lines 6 - 10 should be updated to the approppriate information. Alternatively you can make your own .ENV file, just make sure it's stored in the root of the project.
+- Go into Beer Buddies > server > index.js
+- line 52 (session secret) can be updated to any password of your choice.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Starting the App
 
-## Learn More
+- Make sure the MAMP servers are running.
+- in the terminal navigate to the beer-buddies folder and then type `npm start`. Example:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. `cd /Users/Matt/Desktop/Beer Buddies/beer-buddies`
+2. `npm start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- then navigate to the server folder and run `npm run devStart`. Example:
 
-### Code Splitting
+1. `cd /Users/Matt/Desktop/Beer Buddies/server`
+2. `npm run devStart`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Login
 
-### Analyzing the Bundle Size
+### Admin
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Username: KingCob,
+Password: Admin711
 
-### Making a Progressive Web App
+### Registered user
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Username: testuser,
+Password: aaaaaa
 
-### Advanced Configuration
+### Moving forward, the following functionality needs to be added:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- the ‘friends list’ needs to be added, with instant messaging
+- blacklist functionality needs to be implemented
+- Light and dark mode
+- improve app performance
+- update sidebar for leaderboards
+- improve validation error messaging

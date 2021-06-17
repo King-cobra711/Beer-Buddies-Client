@@ -102,6 +102,7 @@ const AdminMenu = () => {
             onChange={(event) => {
               setSearchTerms(event.target.value);
               setSearchName(event.target.value);
+              console.log(searchName);
             }}
             onClick={() => {
               seterrorMessage("");
@@ -122,7 +123,7 @@ const AdminMenu = () => {
                 }),
               }).then((res) => {
                 console.log(res);
-                if (res.status === 400) {
+                if (res.status === 404) {
                   seterrorMessage("User doesn't exist");
                 } else if (res.status === 200) {
                   history.push("/Admin/EditUser/" + searchName);
@@ -233,8 +234,6 @@ const AdminMenu = () => {
                           } else if (res.status === 200) {
                             setUserName("");
                             setRefresh(true);
-                            console.log(userName);
-                            console.log("upo hereifoh");
                           }
                         });
                       }}

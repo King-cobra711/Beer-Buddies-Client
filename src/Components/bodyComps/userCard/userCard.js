@@ -91,7 +91,7 @@ const UserCard = () => {
             localStorage.setItem("theme", localTheme);
             localStorage.setItem("bio", localBio);
             setSelectedPic(data.User.User_Picture);
-            localStorage.setItem("pic", localPic);
+            localStorage.setItem("pic", data.User.User_Picture);
             setData(true);
             setLoggedIn(true);
           } else if (data.loggedIn === false) {
@@ -287,6 +287,7 @@ const UserCard = () => {
                       body: JSON.stringify(fields),
                     }).then((res) => {
                       if (res.status === 200) {
+                        localStorage.setItem("bio", fields.Biography);
                         setOpenBio(false);
                         setUpdate(!update);
                         res.json().then((data) => {
@@ -388,6 +389,7 @@ const UserCard = () => {
                       }),
                     }).then((res) => {
                       if (res.status === 200) {
+                        localStorage.setItem("theme", selectedValue);
                         setOpenTheme(false);
                         setUpdate(!update);
                         res.json().then((data) => {
@@ -560,6 +562,8 @@ const UserCard = () => {
                       }),
                     }).then((res) => {
                       if (res.status === 200) {
+                        localStorage.setItem("pic", selectedPic);
+                        console.log(selectedPic);
                         setOpenPic(false);
                         setUpdate(!update);
                         res.json().then((data) => {

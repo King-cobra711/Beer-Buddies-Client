@@ -26,6 +26,12 @@ function App() {
   const [userInfo, setUserInfo] = useState([{ UserType_ID: 0 }]);
   const [loaded, setLoaded] = useState(false);
 
+  //  This useEffect checkes if the user is logged in by checking if a seesion object has been established. It will redirect users to different routes if the current route they are trying to access requires them to be logged in.
+
+  // This useEffect will also retrieve user information attached to the session object. This information includes the privillages or "User Type" of the user. Certain routes are only accessible to adminitrative users. Therfore if the user tries to access admin routes the user's information is checked and if it is found that they do not have admin status they will be redirected.
+
+  // The database used in normalised and so in this case the user's privilages depend on the foreign key value is 1 (Admin) or 2 (Registered).
+
   useEffect(() => {
     async function fetchAPI() {
       setLoaded(false);

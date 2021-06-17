@@ -45,7 +45,6 @@ const Register = () => {
                 body: JSON.stringify(fields),
               }).then((res) => {
                 if (res.status === 200) {
-                  console.log("hello from matt");
                   res.json().then((data) => {
                     setUserExists("");
                     setEmailExists("");
@@ -53,6 +52,10 @@ const Register = () => {
                     history.go(0);
                   });
                 }
+              });
+            } else if (res.status === 400) {
+              return res.json().then((problem) => {
+                setUserExists(problem.errors[0].msg);
               });
             } else if (res.status === 409) {
               return res
