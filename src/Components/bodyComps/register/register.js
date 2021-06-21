@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import { Formik, Field, Form, ErrorMessage } from "formik";
 
@@ -135,7 +136,6 @@ const Register = () => {
             color="default"
             size="medium"
             type="submit"
-            // href='/'
           >
             Register
           </Mui.Button>
@@ -145,7 +145,8 @@ const Register = () => {
             variant="contained"
             color="default"
             size="medium"
-            href="/"
+            component={Link}
+            to="/"
           >
             Main Menu
           </Mui.Button>

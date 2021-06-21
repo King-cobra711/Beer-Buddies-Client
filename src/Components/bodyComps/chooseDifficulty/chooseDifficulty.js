@@ -31,7 +31,8 @@ const ChooseDifficulty = () => {
         <h2 style={{ color: "white" }}>Choose difficulty</h2>
 
         <Mui.Button
-          href="/easy"
+          component={Link}
+          to="/easy"
           variant="contained"
           color="default"
           size="medium"
@@ -44,7 +45,8 @@ const ChooseDifficulty = () => {
               <div style={{ borderTop: "white dotted" }}>
                 <p>Beat Tipsy time to access Drunk</p>
                 <Mui.Button
-                  href="/medium"
+                  component={Link}
+                  to="/medium"
                   variant="contained"
                   color="default"
                   size="medium"
@@ -58,7 +60,8 @@ const ChooseDifficulty = () => {
                   DRUNK
                 </Mui.Button>
                 <Mui.Button
-                  href="/hard"
+                  component={Link}
+                  to="/hard"
                   variant="contained"
                   color="default"
                   size="medium"
@@ -76,7 +79,8 @@ const ChooseDifficulty = () => {
             {playerLevel === 2 ? (
               <div style={{ width: "100%" }}>
                 <Mui.Button
-                  href="/medium"
+                  component={Link}
+                  to="/medium"
                   variant="contained"
                   color="default"
                   size="medium"
@@ -87,7 +91,8 @@ const ChooseDifficulty = () => {
                   Beat Drunk time to access Hammered
                 </p>
                 <Mui.Button
-                  href="/hard"
+                  component={Link}
+                  to="/hard"
                   variant="contained"
                   color="default"
                   size="medium"
@@ -105,7 +110,8 @@ const ChooseDifficulty = () => {
             {playerLevel === 3 ? (
               <div>
                 <Mui.Button
-                  href="/medium"
+                  component={Link}
+                  to="/medium"
                   variant="contained"
                   color="default"
                   size="medium"
@@ -113,7 +119,8 @@ const ChooseDifficulty = () => {
                   DRUNK
                 </Mui.Button>
                 <Mui.Button
-                  href="/hard"
+                  component={Link}
+                  to="/hard"
                   variant="contained"
                   color="default"
                   size="medium"
@@ -126,13 +133,14 @@ const ChooseDifficulty = () => {
         ) : (
           <div style={{ borderTop: "white dotted" }}>
             <p>
-              <a href="/login" style={{ color: "white" }}>
+              <Link component={Link} to="/login" style={{ color: "white" }}>
                 Login
-              </a>
+              </Link>
               to access higher levels
             </p>
             <Mui.Button
-              href="/medium"
+              component={Link}
+              to="/medium"
               variant="contained"
               color="default"
               size="medium"
@@ -146,7 +154,8 @@ const ChooseDifficulty = () => {
             </Mui.Button>
 
             <Mui.Button
-              href="/hard"
+              component={Link}
+              to="/hard"
               variant="contained"
               color="default"
               size="medium"
@@ -163,7 +172,8 @@ const ChooseDifficulty = () => {
 
         <div style={{ borderTop: "white dotted", width: "100%" }}>
           <Mui.Button
-            href="/"
+            component={Link}
+            to="/"
             variant="contained"
             color="default"
             size="medium"

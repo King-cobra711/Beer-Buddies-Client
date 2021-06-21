@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import initialiseDeck from "./Deck/deck";
 import Board from "./Board/board";
@@ -147,7 +148,8 @@ const Hard = () => {
       <ul className={classes.Display}>
         <li>
           <Mui.Button
-            href="/"
+            component={Link}
+            to="/"
             variant="contained"
             color="default"
             size="medium"
@@ -157,7 +159,8 @@ const Hard = () => {
         </li>
         <li>
           <Mui.Button
-            href="/difficulty"
+            component={Link}
+            to="/difficulty"
             variant="contained"
             color="default"
             size="medium"

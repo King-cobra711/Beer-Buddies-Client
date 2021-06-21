@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
+import { Link } from "react-router-dom";
 
 import Aux from "../../../hoc/aux";
 import classes from "./login.module.css";
@@ -65,7 +66,6 @@ const Login = () => {
             color="default"
             size="medium"
             type="submit"
-            // href='/login'
           >
             LOGIN
           </Mui.Button>
@@ -75,7 +75,8 @@ const Login = () => {
             color="default"
             size="medium"
             type="submit"
-            href="/register"
+            component={Link}
+            to="/register"
           >
             REGISTER
           </Mui.Button>
@@ -85,7 +86,8 @@ const Login = () => {
             variant="contained"
             color="default"
             size="medium"
-            href="/"
+            component={Link}
+            to="/"
           >
             Main Menu
           </Mui.Button>

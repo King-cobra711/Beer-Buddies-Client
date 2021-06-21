@@ -1,4 +1,6 @@
 import { React, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 import User from "../hoc/user";
 import * as Mui from "@material-ui/core";
 import HelpIcon from "@material-ui/icons/Help";
@@ -41,12 +43,13 @@ const HeaderWelcome = () => {
       {loaded ? (
         <div className={classes.MainContainer}>
           <div
-            onClick={() => home()}
+            // onClick={() => home()}
             className={classes.Background}
             style={{ borderColor: `${color}` }}
           >
             <Mui.IconButton
-              href="/help"
+              component={Link}
+              to="/help"
               size="small"
               style={{
                 maxWidth: "20px",

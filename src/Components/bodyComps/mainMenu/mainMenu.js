@@ -63,7 +63,8 @@ const MainMenu = () => {
                 PLAY
               </Mui.Button>
               <Mui.Button
-                href="/leaderboards"
+                component={Link}
+                to="/leaderboards"
                 variant="contained"
                 color="default"
                 size="medium"
@@ -91,7 +92,8 @@ const MainMenu = () => {
                 PLAY
               </Mui.Button>
               <Mui.Button
-                href="/login"
+                component={Link}
+                to="/login"
                 variant="contained"
                 color="default"
                 size="medium"
@@ -99,7 +101,8 @@ const MainMenu = () => {
                 LOGIN / Register
               </Mui.Button>
               <Mui.Button
-                href="/leaderboards"
+                component={Link}
+                to="/leaderboards"
                 variant="contained"
                 color="default"
                 size="medium"
